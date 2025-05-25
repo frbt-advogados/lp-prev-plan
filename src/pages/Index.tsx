@@ -52,11 +52,12 @@ const Index = () => {
       {/* Header */}
       <header className="bg-slate-800 text-white py-4 px-4 fixed w-full top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center">
-              <span className="text-slate-800 font-bold text-sm">M</span>
-            </div>
-            <span className="font-semibold">Advocacia Previdenciária</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" 
+              alt="FB Advocacia Previdenciária Logo" 
+              className="h-8 w-auto"
+            />
           </div>
           <nav className="hidden md:flex space-x-6">
             <a href="#servicos" className="hover:text-yellow-400 transition-colors">Serviços</a>
@@ -465,11 +466,12 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center">
-                  <span className="text-slate-800 font-bold text-sm">M</span>
-                </div>
-                <span className="font-semibold">Advocacia Previdenciária</span>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" 
+                  alt="FB Advocacia Previdenciária Logo" 
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-gray-400 text-sm">
                 Especialistas em direito previdenciário, dedicados a garantir o melhor para sua aposentadoria.
@@ -515,7 +517,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Advocacia Previdenciária. Todos os direitos reservados.</p>
+            <p>&copy; 2024 FB Advocacia Previdenciária. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
