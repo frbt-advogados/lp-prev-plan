@@ -1,9 +1,14 @@
+
 import { useState } from 'react';
 import { Clock, FileText, TrendingUp, Shield, Target, Calculator, CheckCircle, Phone, Mail, MapPin, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=552730291350&text=Ol%C3%A1%2C+quero+conversar+com+um+advogado+previdenci%C3%A1rio&type=phone_number&app_absent=0";
+  
   const testimonials = [{
     name: "Carlos Eduardo Santos",
     text: "O planejamento previdenciário que eu fiz com o Miguel teve um impacto tão positivo na minha vida que foi uma das melhores decisões que tomei nos últimos tempos.",
@@ -17,12 +22,15 @@ const Index = () => {
     text: "Recomendo muito o trabalho do Miguel. Profissional competente que realmente entende do assunto.",
     rating: 5
   }];
+  
   const nextTestimonial = () => {
     setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
   };
+  
   const prevTestimonial = () => {
     setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length);
   };
+  
   return <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-slate-800 text-white py-4 px-4 fixed w-full top-0 z-50">
@@ -48,9 +56,11 @@ const Index = () => {
           <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
             Um planejamento correto de sua vida previdenciária garante que você consiga os maiores benefícios possíveis para ter um futuro tranquilo.
           </p>
-          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg shadow-lg transform hover:scale-105 transition-all" aria-label="Quero descobrir minha aposentadoria">
-            QUERO DESCOBRIR MINHA APOSENTADORIA
-          </Button>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg shadow-lg transform hover:scale-105 transition-all" aria-label="Quero descobrir minha aposentadoria">
+              QUERO DESCOBRIR MINHA APOSENTADORIA
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -115,9 +125,11 @@ const Index = () => {
           <p className="text-gray-600 mb-8 leading-relaxed">
             O planejamento previdenciário é uma das ferramentas mais importantes para garantir uma aposentadoria tranquila. Através de análises detalhadas e estratégias personalizadas, é possível maximizar os benefícios previdenciários e garantir que você receba o valor máximo a que tem direito, além de otimizar o tempo de contribuição necessário.
           </p>
-          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Falar com especialista">
-            FALAR COM UM ESPECIALISTA
-          </Button>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Falar com especialista">
+              FALAR COM UM ESPECIALISTA
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -216,9 +228,11 @@ const Index = () => {
             <p className="text-gray-600 mb-6">
               Se você se identificou com as afirmações acima, então o planejamento previdenciário é ideal para você!
             </p>
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Quero garantir minha aposentadoria">
-              QUERO GARANTIR MINHA APOSENTADORIA AGORA
-            </Button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Quero garantir minha aposentadoria">
+                QUERO GARANTIR MINHA APOSENTADORIA AGORA
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -294,9 +308,11 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Começar planejamento agora">
-              COMEÇAR MEU PLANEJAMENTO AGORA
-            </Button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Começar planejamento agora">
+                COMEÇAR MEU PLANEJAMENTO AGORA
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -347,9 +363,11 @@ const Index = () => {
           <p className="text-xl mb-8 text-gray-300">
             Faça diretamente com um dos nossos advogados especializados em direito previdenciário.
           </p>
-          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg" aria-label="Falar com especialista agora">
-            FALAR COM UM ESPECIALISTA AGORA
-          </Button>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg" aria-label="Falar com especialista agora">
+              FALAR COM UM ESPECIALISTA AGORA
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -452,4 +470,5 @@ Vitória/ES, CEP 29.060-422</span>
       </footer>
     </div>;
 };
+
 export default Index;
