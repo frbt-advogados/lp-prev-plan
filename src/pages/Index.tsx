@@ -1,63 +1,34 @@
-
 import { useState } from 'react';
-import { 
-  Clock, 
-  FileText, 
-  TrendingUp, 
-  Shield, 
-  Target, 
-  Calculator,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ChevronLeft,
-  ChevronRight,
-  Star
-} from 'lucide-react';
+import { Clock, FileText, TrendingUp, Shield, Target, Calculator, CheckCircle, Phone, Mail, MapPin, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-
 const Index = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  const testimonials = [
-    {
-      name: "Carlos Eduardo Santos",
-      text: "O planejamento previdenciário que eu fiz com o Miguel teve um impacto tão positivo na minha vida que foi uma das melhores decisões que tomei nos últimos tempos.",
-      rating: 5
-    },
-    {
-      name: "Maria Silva Oliveira", 
-      text: "Excelente trabalho! O Miguel me ajudou a entender como organizar minha previdência de forma inteligente e segura.",
-      rating: 5
-    },
-    {
-      name: "João Pedro Costa",
-      text: "Recomendo muito o trabalho do Miguel. Profissional competente que realmente entende do assunto.",
-      rating: 5
-    }
-  ];
-
+  const testimonials = [{
+    name: "Carlos Eduardo Santos",
+    text: "O planejamento previdenciário que eu fiz com o Miguel teve um impacto tão positivo na minha vida que foi uma das melhores decisões que tomei nos últimos tempos.",
+    rating: 5
+  }, {
+    name: "Maria Silva Oliveira",
+    text: "Excelente trabalho! O Miguel me ajudou a entender como organizar minha previdência de forma inteligente e segura.",
+    rating: 5
+  }, {
+    name: "João Pedro Costa",
+    text: "Recomendo muito o trabalho do Miguel. Profissional competente que realmente entende do assunto.",
+    rating: 5
+  }];
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
   };
-
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length);
   };
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-slate-800 text-white py-4 px-4 fixed w-full top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" 
-              alt="FB Advocacia Previdenciária Logo" 
-              className="h-8 w-auto"
-            />
+            <img src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" alt="FB Advocacia Previdenciária Logo" className="h-8 w-auto" />
           </div>
           <nav className="hidden md:flex space-x-6">
             <a href="#servicos" className="hover:text-yellow-400 transition-colors">Serviços</a>
@@ -77,11 +48,7 @@ const Index = () => {
           <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
             Um planejamento correto de sua vida previdenciária garante que você consiga os maiores benefícios possíveis para ter um futuro tranquilo.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg shadow-lg transform hover:scale-105 transition-all"
-            aria-label="Quero descobrir minha aposentadoria"
-          >
+          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg shadow-lg transform hover:scale-105 transition-all" aria-label="Quero descobrir minha aposentadoria">
             QUERO DESCOBRIR MINHA APOSENTADORIA
           </Button>
         </div>
@@ -148,11 +115,7 @@ const Index = () => {
           <p className="text-gray-600 mb-8 leading-relaxed">
             O planejamento previdenciário é uma das ferramentas mais importantes para garantir uma aposentadoria tranquila. Através de análises detalhadas e estratégias personalizadas, é possível maximizar os benefícios previdenciários e garantir que você receba o valor máximo a que tem direito, além de otimizar o tempo de contribuição necessário.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg"
-            aria-label="Falar com especialista"
-          >
+          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Falar com especialista">
             FALAR COM UM ESPECIALISTA
           </Button>
         </div>
@@ -253,11 +216,7 @@ const Index = () => {
             <p className="text-gray-600 mb-6">
               Se você se identificou com as afirmações acima, então o planejamento previdenciário é ideal para você!
             </p>
-            <Button 
-              size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg"
-              aria-label="Quero garantir minha aposentadoria"
-            >
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Quero garantir minha aposentadoria">
               QUERO GARANTIR MINHA APOSENTADORIA AGORA
             </Button>
           </div>
@@ -335,11 +294,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button 
-              size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg"
-              aria-label="Começar planejamento agora"
-            >
+            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-3 rounded-lg" aria-label="Começar planejamento agora">
               COMEÇAR MEU PLANEJAMENTO AGORA
             </Button>
           </div>
@@ -360,9 +315,7 @@ const Index = () => {
                 {testimonials[currentTestimonial].text}
               </p>
               <div className="flex justify-center mb-4">
-                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
-                ))}
+                {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />)}
               </div>
               <p className="font-semibold text-slate-800">
                 {testimonials[currentTestimonial].name}
@@ -370,32 +323,13 @@ const Index = () => {
             </div>
             
             <div className="flex justify-center space-x-4 mt-8">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={prevTestimonial}
-                className="rounded-full"
-                aria-label="Depoimento anterior"
-              >
+              <Button variant="outline" size="sm" onClick={prevTestimonial} className="rounded-full" aria-label="Depoimento anterior">
                 <ChevronLeft className="w-4 h-4" />
               </Button>
               <div className="flex space-x-2 items-center">
-                {testimonials.map((_, index) => (
-                  <div
-                    key={index}
-                    className={`w-2 h-2 rounded-full ${
-                      index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
-                    }`}
-                  />
-                ))}
+                {testimonials.map((_, index) => <div key={index} className={`w-2 h-2 rounded-full ${index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'}`} />)}
               </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={nextTestimonial}
-                className="rounded-full"
-                aria-label="Próximo depoimento"
-              >
+              <Button variant="outline" size="sm" onClick={nextTestimonial} className="rounded-full" aria-label="Próximo depoimento">
                 <ChevronRight className="w-4 h-4" />
               </Button>
             </div>
@@ -413,11 +347,7 @@ const Index = () => {
           <p className="text-xl mb-8 text-gray-300">
             Faça diretamente com um dos nossos advogados especializados em direito previdenciário.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg"
-            aria-label="Falar com especialista agora"
-          >
+          <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg rounded-lg" aria-label="Falar com especialista agora">
             FALAR COM UM ESPECIALISTA AGORA
           </Button>
         </div>
@@ -467,11 +397,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" 
-                  alt="FB Advocacia Previdenciária Logo" 
-                  className="h-8 w-auto"
-                />
+                <img src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" alt="FB Advocacia Previdenciária Logo" className="h-8 w-auto" />
               </div>
               <p className="text-gray-400 text-sm">
                 Especialistas em direito previdenciário, dedicados a garantir o melhor para sua aposentadoria.
@@ -491,7 +417,9 @@ const Index = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
-                  <span>São Paulo, SP</span>
+                  <span>Av. Presidente Vargas, 2.700, Sl. 305, Jd. da Penha
+
+Vitória/ES, CEP 29.060-422</span>
                 </div>
               </div>
             </div>
@@ -521,8 +449,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
