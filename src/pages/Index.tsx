@@ -409,7 +409,7 @@ const Index = () => {
               <div className="space-y-2 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>(11) 99999-9999</span>
+                  <span>(27) 3029-1350</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
@@ -439,7 +439,8 @@ Vitória/ES, CEP 29.060-422</span>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li>Política de Privacidade</li>
                 <li>Termos de Uso</li>
-                <li>OAB/SP 123.456</li>
+                <li>
+              </li>
               </ul>
             </div>
           </div>
