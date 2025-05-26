@@ -36,7 +36,7 @@ const Index = () => {
       <header className="bg-slate-800 text-white py-4 px-4 fixed w-full top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <img src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" alt="FB Advocacia Previdenciária Logo" className="h-8 w-auto" />
+            <img src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" alt="FB Advocacia Previdenciária Logo" className="h-12 w-auto" />
           </div>
           <nav className="hidden md:flex space-x-6">
             <a href="#servicos" className="hover:text-yellow-400 transition-colors">Serviços</a>
@@ -415,7 +415,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" alt="FB Advocacia Previdenciária Logo" className="h-8 w-auto" />
+                <img src="/lovable-uploads/88a542bf-64b0-4bb3-9408-d46dae734818.png" alt="FB Advocacia Previdenciária Logo" className="h-12 w-auto" />
               </div>
               <p className="text-gray-400 text-sm">
                 Especialistas em direito previdenciário, dedicados a garantir o melhor para sua aposentadoria.
